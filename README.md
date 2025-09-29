@@ -1,4 +1,4 @@
-# Gamifizierter Webshop Prototyp FRONTEND
+***Gamifizierter Webshop Prototyp FRONTEND***
 
 **Dependencies** befinden sich in der `package.json` und werden über `npm install` installiert bzw. geupdated.
 
