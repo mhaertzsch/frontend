@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+    --color-super_ultra_rare: #00dfcc;
+    --color-ultra_rare: #fac518;
+    --color-super_rare: #4118ec;
+    --color-rare: green;
+    --color-common: dimgray;
+}
+@utility no-scrollbar {
+    @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+:root{
+    --color-primary: #c81e3d;
+    --color-primary-content: white;
+    --color-secondary: #590818;
+    --color-secondary-content: #fac518;
+    --color-accent: #320d59;
+    --color-accent-hover: #7e629a;
+    --color-accent-content: white;
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.hover-opacity:hover {
+    opacity: 0.8;
+}
+
+.btn-special {
+    @apply btn btn-ghost btn-circle text-primary-content hover:text-primary;
+}
+.product-grid{
+    @apply container mx-auto grid gap-4 grid-cols-[repeat(auto-fill,minmax(150px,1fr))] px-8 py-4 grid justify-items-center;
+}
+
+.holocard {
+
+    margin: 0;
+    background-size: 200% 200% !important;
+    background: linear-gradient(90deg,rgba(255, 0, 0, 1) 0%, rgba(255, 157, 0, 1) 12%, rgba(255, 247, 0, 1) 25%, rgba(0, 255, 123, 1) 39%, rgba(0, 255, 251, 1) 52%, rgba(0, 111, 255, 1) 65%, rgba(146, 63, 229, 1) 76%, rgba(255, 0, 221, 1) 88%, rgba(255, 0, 0, 1) 100%);
+    animation: gradientShift 2s linear infinite;
+    @apply rounded-lg
+}
+
+.srholo {
+
+    margin: 0;
+    background-size: 200% 200% !important;
+    background: linear-gradient(90deg,rgba(103, 13, 130, 1) 1%, rgba(137, 118, 204, 1) 8%, rgba(71, 87, 255, 0.9) 13%, rgba(253, 29, 234, 1) 20%, rgba(165, 34, 253, 1) 31%, rgba(35, 75, 253, 1) 39%, rgba(169, 180, 232, 1) 44%, rgba(0, 0, 110, 1) 48%, rgba(91, 67, 253, 1) 57%, rgba(102, 109, 242, 1) 66%, rgba(201, 151, 232, 1) 71%, rgba(246, 89, 228, 1) 75%, rgba(239, 75, 237, 1) 80%, rgba(66, 41, 158, 1) 84%, rgba(210, 193, 214, 1) 88%, rgba(86, 48, 133, 1) 93%, rgba(12, 20, 176, 1) 100%);
+    animation: gradientShift 10s linear infinite;
+    @apply rounded-lg
+}
+
+.settings-list-item{
+    @apply my-8 mx-4
+}
+.achievement-card {
+    @apply card w-90 card-xs shadow-sm mb-2 mx-auto
+}
+h1 {
+    @apply text-xl font-bold
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
